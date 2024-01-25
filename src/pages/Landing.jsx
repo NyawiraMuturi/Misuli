@@ -1,12 +1,17 @@
-import { HStack, Image, Box, Heading, Text, Spacer, Icon} from "@chakra-ui/react"
+import { HStack, Image, Box, Heading, Text,  Icon, Flex, Divider, useMediaQuery} from "@chakra-ui/react"
 import hero from '../assets/img/hero.jpg'
 import Navbar from "../components/Navbar"
 import HeroCard from "../components/cards/HeroCard"
 import { CgGym } from "react-icons/cg";
 import { GiRunningShoe } from "react-icons/gi";
 import { PiCircleDashedThin } from "react-icons/pi"; 
+import { CiInstagram } from "react-icons/ci";
+import { RiTwitterXLine } from "react-icons/ri";
+import { CiFacebook } from "react-icons/ci";
+import { CiYoutube } from "react-icons/ci";
 
 const Landing = () => {
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
 
   const heroCardData = [
     {
@@ -28,23 +33,33 @@ const Landing = () => {
   ];
 
   return (
-    <Box h={'100vh'} p={10} bgGradient='linear(to-r, gray.900, gray.900, primary.accent)'>
+    <Box h={'100vh'} p={10} bgGradient='linear(to-r, gray.900, gray.900, primary.accent)' overflowY='none' display={{ base: 'none', md: 'block' }}>
       <Navbar />
-      <HStack>
+      <HStack spacing='10px'>
         <Box color="white">
-          <Text >WORK HARD</Text>
-          <Heading>GET YOUR BODY MOVING</Heading>
-          <Text>Leave the comfort zone and get to know all of our programs personalized especially for you</Text>
-          <Box>
-            <Text>Item 1</Text>
-            <Text>Item 1</Text>
-            <Text>Item 1</Text>
-            <Text>Item 1</Text>
-          </Box>
+          <Text color='secondary.light' >WORK HARD</Text>
+          <Heading fontSize='7xl'>GET YOUR BODY MOVING</Heading>
+          <Text fontSize='xl'>Leave the comfort zone and get to know all of our programs personalized especially for you</Text> <br />
+          <Flex gap={30}>
+            <Text color='secondary.light'>Personal Trainers</Text> <Divider orientation='vertical' color='tomato' />
+            <Text color='secondary.light'>Meal Plans</Text> <Divider orientation='vertical' />
+            <Text color='secondary.light'>Custom Plans</Text> <Divider orientation='vertical' />
+            <Text color='secondary.light'>Free Consultation</Text>
+          </Flex>
+            <br /> <br /><br /> <br />
+          <Text>Follow Us on Our Socials</Text>
+          <br /> 
+          <Flex gap={5}>
+            <Icon as={CiInstagram} boxSize={5}/>
+            <Icon as={RiTwitterXLine} boxSize={5}/>
+            <Icon as={CiFacebook} boxSize={5}/>
+            <Icon as={CiYoutube} boxSize={5}/>
+          </Flex>
         </Box>
-        <Spacer />
+        
         <Box position='relative'>
-        <Image src={hero} h={'800'} />
+          <Icon as={PiCircleDashedThin} boxSize={450} color='primary.medium' position='absolute' right={180} top={150} zIndex={0}/>
+        <Image src={hero} h={'800'} position='relative'/>
             {heroCardData.map((card, index)=>(
               <HeroCard key={index} {...card}/>
             ))}

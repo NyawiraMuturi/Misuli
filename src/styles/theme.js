@@ -1,4 +1,6 @@
 import {extendTheme} from '@chakra-ui/react'
+import '@fontsource/changa'
+import '@fontsource/roboto-mono'
 
 export const theme = extendTheme({
     colors: {
@@ -15,7 +17,6 @@ export const theme = extendTheme({
           800: '#1A1C33',
           900: '#05071D',
         },  
-
         primary: {
             medium: '#ff2357', 
             light: '#FFA4BA',
@@ -26,7 +27,10 @@ export const theme = extendTheme({
             medium: '#FFC121', 
             light: '#FFDF8C'
         },
-
       },
 
+    fonts: {
+        heading: 'changa',
+        body: 'roboto-mono'
+    }
   });
