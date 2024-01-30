@@ -11,7 +11,6 @@ import { CiFacebook } from "react-icons/ci";
 import { CiYoutube } from "react-icons/ci";
 
 const Landing = () => {
-  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
 
   const heroCardData = [
     {
@@ -33,7 +32,7 @@ const Landing = () => {
   ];
 
   return (
-    <Box h={'100vh'} p={10} bgGradient='linear(to-r, gray.900, gray.900, primary.accent)' overflowY='none' display={{ base: 'none', md: 'block' }}>
+    <Box  p={10} bgGradient='linear(to-r, gray.900, gray.900, primary.accent)'  >
       <Navbar />
       <HStack spacing='10px'>
         <Box color="white">
