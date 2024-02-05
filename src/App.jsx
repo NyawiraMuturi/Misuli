@@ -1,10 +1,12 @@
-import Landing from "./pages/Landing"
+import Layout from "./components/Layout/Layout"
+import TopNavBar from "./components/Navigation/topNavBar"
 
 function App() {
 
   return (
     <>
-      <Landing/>
+      <TopNavBar/>
+      <Layout/>
     </>
   )
 }

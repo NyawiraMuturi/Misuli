@@ -1,8 +1,12 @@
+import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
+import RightSideNav from '../components/Navigation/rightSideNav'
 
 const Dashboard = () => {
   return (
-    <div>You are successfully logged in</div>
+    <Box>
+      <Text>This is the Dashboard</Text>
+    </Box>
   )
 }
 

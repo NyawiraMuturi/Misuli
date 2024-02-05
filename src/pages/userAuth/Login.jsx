@@ -1,7 +1,7 @@
 import { HStack , Box, Image} from '@chakra-ui/react'
 import hero from '../../assets/img/heroLogin.png'
 import AuthForm from '../../components/forms/authForm'
-import { useLoginUser } from '../../api/unauthenticatedReq'
+import { useLoginUser } from '../../hooks/unauthenticatedReq'
 
 const Login = () => {
 

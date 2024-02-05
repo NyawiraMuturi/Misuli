@@ -1,4 +1,4 @@
-import { axiosClient } from "./axios";
+import { axiosClient } from "../api/axios";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 
