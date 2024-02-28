@@ -11,7 +11,7 @@ import MealPrep from '../pages/MealPrep'
 
 const router = createBrowserRouter ([
     {
-        path: "/home",
+        path: "/",
         element: <Landing/>
     }, 
     {
@@ -35,21 +35,21 @@ const router = createBrowserRouter ([
 
 
     {
-        path: "/",
+        path: "/home",
         element: <Layout/>, 
         children:[
             {
-                path:'/',
+                path:'/home/dashboard',
                 element: <Dashboard/>
             },
 
             {
-                path:'/activity',
+                path:'/home/activity',
                 element: <Activity/>
             },
 
             {
-                path:'/meal-plan',
+                path:'/home/meal-plan',
                 element: <MealPrep/>
             },
         ]

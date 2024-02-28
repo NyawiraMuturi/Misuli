@@ -1,6 +1,7 @@
 import { HStack , Box, Image} from '@chakra-ui/react'
 import hero from '../../assets/img/heroLogin.png'
 import AuthForm from '../../components/forms/authForm'
+import { SignIn, SignUp } from "@clerk/clerk-react";
 
 const Register = () => {
 
@@ -39,7 +40,10 @@ const Register = () => {
 
   return (
     <HStack h='100vh' >
+      
       <Box  w='50%' px={40} >
+        
+        {/* <SignIn/> */}
         <AuthForm heading='REGISTER' onSubmit={onSubmit} inputFields={registerFields} text='SIGN UP' linkText='Back to Login' link='/login'/>
       </Box>
 

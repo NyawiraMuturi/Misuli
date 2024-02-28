@@ -1,12 +1,18 @@
 import Layout from "./components/Layout/Layout"
 import TopNavBar from "./components/Navigation/topNavBar"
+import { SignedOut, SignedIn } from "@clerk/clerk-react"
+
 
 function App() {
 
   return (
     <>
-      <TopNavBar/>
-      <Layout/>
+      
+      <SignedIn>
+        <TopNavBar />
+        <Layout />
+      </SignedIn>
+
     </>
   )
 }
